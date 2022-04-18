@@ -34,7 +34,6 @@
 
     &__list {
       position: absolute;
-      right: 0;
       bottom: 0;
       transform: translateY(calc(100% + 1.25rem));
 
@@ -48,11 +47,15 @@
         width: 9.5625rem;
         min-height: 10rem;
         padding: 1.5rem;
+
+        right: 0;
       }
       &--company {
         width: 7.25rem;
         min-height: 8rem;
         padding: 1.5rem;
+
+        left: 0;
       }
     }
   }
