@@ -10,17 +10,99 @@
     <script src="scripts/app.js" defer></script>
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <h1 class="header__logo">snap</h1>
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <details class="dropdown">
+              <summary class="dropdown__expand">
+                <span class="dropdown__text">Features</span>
+                <svg
+                  class="dropdown__arrow"
+                  width="10"
+                  height="6"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="dropdown__arrow-path"
+                    stroke="#686868"
+                    stroke-width="1.5"
+                    fill="none"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </summary>
+              <ul class="dropdown__list dropdown__list--features">
+                <li class="dropdown__item">
+                  <img class="dropdown__icon" src="images/icon-todo.svg" alt="" />
+                  <a href="#" class="dropdown__link">Todo List</a>
+                </li>
+                <li class="dropdown__item">
+                  <img class="dropdown__icon" src="images/icon-calendar.svg" alt="" />
+                  <a href="#" class="dropdown__link">Calendar</a>
+                </li>
+                <li class="dropdown__item">
+                  <img class="dropdown__icon" src="images/icon-reminders.svg" alt="" />
+                  <a href="#" class="dropdown__link">Reminders</a>
+                </li>
+                <li class="dropdown__item">
+                  <img class="dropdown__icon" src="images/icon-planning.svg" alt="" />
+                  <a href="#" class="dropdown__link">Planning</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="nav__item">
+            <details class="dropdown">
+              <summary class="dropdown__expand">
+                <span class="dropdown__text">Company</span>
+                <svg
+                  class="dropdown__arrow"
+                  width="10"
+                  height="6"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="dropdown__arrow-path"
+                    stroke="#686868"
+                    stroke-width="1.5"
+                    fill="none"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </summary>
+              <ul class="dropdown__list dropdown__list--company">
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">History</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Our Team</a>
+                </li>
+                <li class="dropdown__item">
+                  <a href="#" class="dropdown__link">Blog</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Careers</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">About</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__button-wrapper">
+        <a href="#" class="button-login hide-on-small" role="button">Login</a>
+        <a href="#" class="button-register hide-on-small" role="button">Register</a>
+      </div>
+    </header>
+  </body>
 </html>
 
 <!-- 
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
 
   Make remote work
 

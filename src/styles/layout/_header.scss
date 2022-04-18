@@ -1,3 +1,27 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
+.header {
+  display: flex;
+  align-items: center;
+
+  margin-top: 1rem;
+
+  &__button-wrapper {
+    margin-left: auto;
+  }
+
+  @include media('>small') {
+    margin-top: 1.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+
+    &__nav {
+      margin-left: 3.75rem;
+    }
+
+    &__button-wrapper {
+      display: flex;
+      align-items: center;
+
+      gap: 2.5rem;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.dropdown {
+  &__expand {
+    list-style: none;
+
+    cursor: pointer;
+  }
+
+  &__arrow {
+    margin-bottom: 0.0625rem;
+  }
+
+  &__list {
+    list-style: none;
+
+    display: grid;
+    gap: 1rem;
+  }
+
+  &__list--features &__item {
+    display: grid;
+    grid-template-columns: 1.25rem 1fr;
+    column-gap: 0.875rem;
+  }
+
+  &__icon {
+    justify-self: center;
+  }
+
+  // &__link {
+  // }
+
+  @include media('>small') {
+    position: relative;
+
+    &__list {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      transform: translateY(calc(100% + 1.25rem));
+
+      border-radius: 0.625rem;
+      background-color: $color-white;
+      box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+        rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+        rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+      &--features {
+        width: 9.5625rem;
+        min-height: 10rem;
+        padding: 1.5rem;
+      }
+      &--company {
+        width: 7.25rem;
+        min-height: 8rem;
+        padding: 1.5rem;
+      }
+    }
+  }
+}
