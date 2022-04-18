@@ -2,17 +2,22 @@
   &__list {
     list-style: none;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
 
     gap: 1rem;
   }
-  &__item {
+  // &__item {
+  // }
+
+  @include media('<medium') {
+    &__list[data-expanded='false'] {
+      display: none;
+    }
   }
 
-  @include media('>small') {
+  @include media('>medium') {
     &__list {
-      flex-direction: row;
+      display: flex;
 
       gap: 2.5rem;
     }
