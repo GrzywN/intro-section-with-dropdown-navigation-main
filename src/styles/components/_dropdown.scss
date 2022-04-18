@@ -29,6 +29,13 @@
   // &__link {
   // }
 
+  @include media('<medium') {
+    &__list {
+      margin-top: 0.875rem;
+      margin-left: 1.5rem;
+    }
+  }
+
   @include media('>small') {
     position: relative;
 

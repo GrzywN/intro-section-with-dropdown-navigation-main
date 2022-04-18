@@ -1,0 +1,4 @@
+- Added padding for header on mobile/small widths
+- Copied JS from other project
+- Changed data expanded from nav\_\_list -> nav
+- Build simple nav for mobile, it needs to be improved / fixed
