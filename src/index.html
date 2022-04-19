@@ -13,8 +13,7 @@
   <body>
     <header class="header">
       <h1 class="header__logo">snap</h1>
-      <nav class="header__nav nav" id="nav" data-expanded="true">
-        <!-- data-expanded true for debug -->
+      <nav class="header__nav nav" id="nav" data-expanded="false">
         <ul class="nav__list">
           <li class="nav__item">
             <details class="dropdown">
@@ -105,7 +104,9 @@
           aria-label="Main Menu"
           aria-controls="nav"
         >
-          <span class="hamburger__bar"></span>
+          <div class="hamburger__box">
+            <span class="hamburger__bar"></span>
+          </div>
         </button>
       </div>
     </header>
