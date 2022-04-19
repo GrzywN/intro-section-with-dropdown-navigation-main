@@ -25,6 +25,18 @@
   @include heading-l;
 }
 
+@mixin heading-s {
+  font-size: 2.25rem;
+  line-height: 2.625rem;
+  letter-spacing: -0.0313rem;
+}
+%heading-s {
+  font-family: $font-sans-serif;
+  font-weight: 700;
+
+  @include heading-s;
+}
+
 @mixin body-m {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -57,9 +69,21 @@
 }
 %button {
   font-family: $font-sans-serif;
-  font-family: 500;
+  font-family: 700;
 
   @include button;
+}
+
+@mixin button-s {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  letter-spacing: -0.0138rem;
+}
+%button-s {
+  font-family: $font-sans-serif;
+  font-family: 700;
+
+  @include button-s;
 }
 
 @mixin link {
@@ -71,6 +95,7 @@
   text-decoration: none;
   font-family: $font-sans-serif;
   font-family: 500;
+  color: $color-medium-grey;
 
   @include link;
 }
@@ -133,5 +158,31 @@
     .dropdown__arrow-path {
       stroke: $color-almost-black !important;
     }
+  }
+}
+
+.hero {
+  @include media('<medium') {
+    text-align: center;
+  }
+}
+
+.hero__heading {
+  @extend %heading-s;
+  @include media('>small') {
+    @include heading-l;
+  }
+}
+
+.hero__paragraph {
+  @extend %link;
+}
+
+.button-learn-more {
+  @extend %button-s;
+  @extend %transition;
+
+  @include media('>small') {
+    @include button;
   }
 }

@@ -1,3 +1,4 @@
-Quick fix to stop animations on resize from previous commit
+Added hero mobile markup and design
 
-- Added special class to `_base.scss`, so JS function can properly work from now on.
+- Everything looks good on mobile.
+- Added button component, some typography and what's the most important - hero section.
