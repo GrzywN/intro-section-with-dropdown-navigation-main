@@ -3,6 +3,7 @@ const hamburger = document.getElementById('hamburger');
 const backdrop = document.getElementById('backdrop');
 
 let isMenuExpanded = false;
+let resizeTimer;
 
 const toggleNavMenu = () => {
   isMenuExpanded = !isMenuExpanded;
@@ -11,30 +12,14 @@ const toggleNavMenu = () => {
   nav.dataset.expanded = `${isMenuExpanded}`;
 };
 
+const stopAnimationOnResize = () => {
+  document.body.classList.add('resize-animation-stopper');
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    document.body.classList.remove('resize-animation-stopper');
+  }, 400);
+};
+
+window.addEventListener('resize', stopAnimationOnResize);
 hamburger.addEventListener('click', toggleNavMenu);
 backdrop.addEventListener('click', toggleNavMenu);
-
-// let resizeTimer;
-
-// const handleUserClicks = (event) => {
-//   if (isClickedOnHamburger(event)) {
-//     toggleNavMenu();
-//   } else if (isMenuExpanded && isClickedOutsideMenu(event)) {
-//     toggleNavMenu();
-//   }
-// };
-
-// const isClickedOnHamburger = (event) =>
-//   event.target.id === 'hamburger' || event.target.classList.contains('hamburger__bar');
-// const isClickedOutsideMenu = (event) => !event.target.classList.contains('nav__list');
-
-// const stopAnimationOnResize = () => {
-//   document.body.classList.add('resize-animation-stopper');
-//   clearTimeout(resizeTimer);
-//   resizeTimer = setTimeout(() => {
-//     document.body.classList.remove('resize-animation-stopper');
-//   }, 400);
-// };
-
-// document.addEventListener('click', (event) => handleUserClicks(event));
-// window.addEventListener('resize', stopAnimationOnResize);
