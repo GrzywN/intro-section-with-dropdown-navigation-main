@@ -1,4 +1,6 @@
 .nav {
+  @extend %transition;
+
   &__list {
     list-style: none;
 
@@ -6,8 +8,10 @@
 
     gap: 1rem;
   }
-  // &__item {
-  // }
+
+  + .backdrop {
+    @extend %transition;
+  }
 
   @include media('<medium') {
     background-color: $color-white;
@@ -22,19 +26,34 @@
     padding-left: 1.5rem;
 
     &[data-expanded='false'] {
-      visibility: collapse;
+      opacity: 0;
+      transform: translateX(100%);
+      pointer-events: none;
     }
     &[data-expanded='true'] {
-      visibility: visible;
+      opacity: 1;
+      transform: translateX(0%);
+      pointer-events: all;
     }
-    &[data-expanded='true']::before {
-      content: '';
+
+    + .backdrop {
       position: fixed;
       left: 0;
       right: 60%;
       top: 0;
       bottom: 0;
       background-color: rgba(0, 0, 0, 0.75);
+      transform: none;
+    }
+
+    &[data-expanded='false'] + .backdrop {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &[data-expanded='true'] + .backdrop {
+      opacity: 1;
+      pointer-events: all;
     }
   }
 

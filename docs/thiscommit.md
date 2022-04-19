@@ -1,1 +1,3 @@
-- Added extra transitions for dropdown menus on mobile and desktop devices
+- Made backdrop in a different way
+- Menu toggles off, when the user clicks on the backdrop
+- Added animation when the navigation toggles

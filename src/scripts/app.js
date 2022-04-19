@@ -1,5 +1,6 @@
 const nav = document.getElementById('nav');
 const hamburger = document.getElementById('hamburger');
+const backdrop = document.getElementById('backdrop');
 
 let isMenuExpanded = false;
 
@@ -11,6 +12,7 @@ const toggleNavMenu = () => {
 };
 
 hamburger.addEventListener('click', toggleNavMenu);
+backdrop.addEventListener('click', toggleNavMenu);
 
 // let resizeTimer;
 
