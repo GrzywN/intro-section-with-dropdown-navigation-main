@@ -1,1 +1,1 @@
-- Added rotation for arrows in dropdown menu
+- Added extra transitions for dropdown menus on mobile and desktop devices

@@ -3,6 +3,10 @@
     transform: rotate(180deg);
   }
 
+  &[open] &__list {
+    transform: none;
+  }
+
   &__expand {
     list-style: none;
 
@@ -20,6 +24,10 @@
 
     display: grid;
     gap: 1rem;
+
+    transform: translateY(-10%);
+
+    @extend %transition;
   }
 
   &__list--features &__item {
@@ -45,10 +53,15 @@
   @include media('>small') {
     position: relative;
 
+    &[open] &__list {
+      transform: translateY(calc(100% + 1.25rem));
+    }
+
     &__list {
       position: absolute;
       bottom: 0;
-      transform: translateY(calc(100% + 1.25rem));
+
+      transform: translateY(100%);
 
       border-radius: 0.625rem;
       background-color: $color-white;
