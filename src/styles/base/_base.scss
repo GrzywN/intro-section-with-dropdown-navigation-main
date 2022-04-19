@@ -17,3 +17,8 @@ body {
   min-height: 100vh;
   background-color: $color-almost-white;
 }
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}

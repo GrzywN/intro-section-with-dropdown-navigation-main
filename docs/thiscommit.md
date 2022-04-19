@@ -1,5 +1,3 @@
-Improvement for JavaScript file:
+Quick fix to stop animations on resize from previous commit
 
-- Removed comments
-- Changed the flow of document
-- Added / Uncommented function and handler to stop animations on resize
+- Added special class to `_base.scss`, so JS function can properly work from now on.
