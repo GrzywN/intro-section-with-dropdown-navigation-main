@@ -1,4 +1,8 @@
 .dropdown {
+  &[open] &__arrow {
+    transform: rotate(180deg);
+  }
+
   &__expand {
     list-style: none;
 
@@ -7,6 +11,8 @@
 
   &__arrow {
     margin-bottom: 0.0625rem;
+
+    @extend %transition;
   }
 
   &__list {
