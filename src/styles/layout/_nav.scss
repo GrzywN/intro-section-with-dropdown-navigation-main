@@ -1,4 +1,6 @@
 .nav {
+  z-index: 500;
+
   @extend %transition;
 
   &__list {
@@ -17,7 +19,7 @@
     background-color: $color-white;
 
     position: fixed;
-    left: 40%;
+    left: 36%;
     top: 0;
     bottom: 0;
     right: 0;
@@ -38,10 +40,7 @@
 
     + .backdrop {
       position: fixed;
-      left: 0;
-      right: 60%;
-      top: 0;
-      bottom: 0;
+      inset: 0;
       background-color: rgba(0, 0, 0, 0.75);
       transform: none;
     }
