@@ -122,7 +122,7 @@
 .dropdown__link,
 .nav__link {
   @extend %link;
-  @include media('>small') {
+  @include media('>=medium') {
     @include body-s;
   }
 }
@@ -162,14 +162,15 @@
 }
 
 .hero {
-  @include media('<medium') {
-    text-align: center;
+  text-align: center;
+  @include media('>=large') {
+    text-align: left;
   }
 }
 
 .hero__heading {
   @extend %heading-s;
-  @include media('>small') {
+  @include media('>=medium') {
     @include heading-l;
   }
 }
@@ -182,7 +183,7 @@
   @extend %button-s;
   @extend %transition;
 
-  @include media('>small') {
+  @include media('>=medium') {
     @include button;
   }
 }

@@ -15,15 +15,3 @@
   position: absolute;
   width: 1px;
 }
-
-.hide-on-small {
-  @include media('<medium') {
-    display: none;
-  }
-}
-
-.hide-on-medium {
-  @include media('>=medium') {
-    display: none;
-  }
-}

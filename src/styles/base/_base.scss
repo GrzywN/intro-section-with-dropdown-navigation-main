@@ -16,6 +16,9 @@ html {
 body {
   min-height: 100vh;
   background-color: $color-almost-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .resize-animation-stopper * {

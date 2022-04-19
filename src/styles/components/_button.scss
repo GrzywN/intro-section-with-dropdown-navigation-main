@@ -27,3 +27,10 @@
     color: $color-black;
   }
 }
+.button-login,
+.button-register {
+  display: none;
+  @include media('>=medium') {
+    display: block;
+  }
+}
