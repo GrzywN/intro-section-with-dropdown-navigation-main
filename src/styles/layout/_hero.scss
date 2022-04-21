@@ -22,10 +22,12 @@
       margin-left: 1rem;
       margin-right: 1rem;
     }
+
     &__paragraph {
       margin-top: 1rem;
       margin-bottom: 1.5rem;
     }
+
     &__clients {
       margin-top: 3rem;
       margin-left: 1rem;
@@ -89,6 +91,7 @@
 
     &__image-desktop {
       grid-area: area-image;
+      width: 30rem;
       height: 40rem;
     }
 

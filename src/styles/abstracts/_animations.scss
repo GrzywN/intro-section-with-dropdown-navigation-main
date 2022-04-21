@@ -4,3 +4,63 @@ $transition-default: 500ms ease;
   transition: $transition-default;
   transition-property: color, background-color, border, transform, stroke, opacity;
 }
+
+$animation-transform: -10rem;
+$animation-default: 2s cubic-bezier(0.25, 1, 0.5, 1);
+
+@keyframes slideFromUp {
+  from {
+    transform: translateY($animation-transform);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX($animation-transform);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromBottom {
+  from {
+    transform: translateY(-$animation-transform);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@include media('>=medium') {
+  .hero__heading {
+    animation: slideFromUp $animation-default;
+  }
+  .hero__paragraph {
+    animation: slideFromLeft $animation-default;
+  }
+  .hero .button-learn-more {
+    animation: slideFromBottom $animation-default;
+  }
+  .hero__clients {
+    animation: opacity $animation-default;
+  }
+}

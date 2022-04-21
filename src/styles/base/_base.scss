@@ -9,8 +9,6 @@ html {
 
   margin: 0;
   padding: 0;
-
-  // border: 1px dashed grey;
 }
 
 body {
@@ -21,7 +19,14 @@ body {
   align-items: center;
 }
 
+.js-loading *,
+.js-loading *::before,
+.js-loading *::after {
+  animation-play-state: paused !important;
+}
+
 .resize-animation-stopper * {
   animation: none !important;
   transition: none !important;
+  animation-duration: 0 !important;
 }

@@ -3,7 +3,6 @@ const hamburger = document.getElementById('hamburger');
 const backdrop = document.getElementById('backdrop');
 
 let isMenuExpanded = false;
-let resizeTimer;
 
 const toggleNavMenu = () => {
   isMenuExpanded = !isMenuExpanded;
@@ -12,14 +11,15 @@ const toggleNavMenu = () => {
   nav.dataset.expanded = `${isMenuExpanded}`;
 };
 
-const stopAnimationOnResize = () => {
+hamburger.addEventListener('click', toggleNavMenu);
+backdrop.addEventListener('click', toggleNavMenu);
+
+let resizeTimer;
+
+window.addEventListener('resize', () => {
   document.body.classList.add('resize-animation-stopper');
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => {
     document.body.classList.remove('resize-animation-stopper');
   }, 400);
-};
-
-window.addEventListener('resize', stopAnimationOnResize);
-hamburger.addEventListener('click', toggleNavMenu);
-backdrop.addEventListener('click', toggleNavMenu);
+});
