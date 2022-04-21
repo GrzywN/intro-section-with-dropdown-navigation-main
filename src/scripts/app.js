@@ -13,3 +13,7 @@ const toggleNavMenu = () => {
 
 hamburger.addEventListener('click', toggleNavMenu);
 backdrop.addEventListener('click', toggleNavMenu);
+
+window.addEventListener('resize', () => {
+  document.body.classList.add('resize-animation-stopper');
+});

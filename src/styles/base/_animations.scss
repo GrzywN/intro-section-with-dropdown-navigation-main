@@ -51,6 +51,15 @@ $animation-default: 2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 @include media('>=medium') {
+  .resize-animation-stopper {
+    .hero__heading,
+    .hero__paragraph,
+    .hero .button-learn-more,
+    .hero__clients {
+      animation: none !important;
+    }
+  }
+
   .hero__heading {
     animation: slideFromUp $animation-default;
   }
