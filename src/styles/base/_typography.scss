@@ -66,12 +66,12 @@
 
 @mixin button {
   font-size: 1.125rem;
+  font-weight: 700;
   line-height: 1.75rem;
   letter-spacing: -0.0156rem;
 }
 %button {
   font-family: $font-sans-serif;
-  font-weight: 700;
 
   @include button;
 }
