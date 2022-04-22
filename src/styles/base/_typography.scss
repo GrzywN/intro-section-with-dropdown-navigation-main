@@ -71,7 +71,7 @@
 }
 %button {
   font-family: $font-sans-serif;
-  font-family: 700;
+  font-weight: 700;
 
   @include button;
 }
