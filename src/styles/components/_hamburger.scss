@@ -8,6 +8,7 @@
   margin: 0;
 
   &__box {
+    display: inline-block;
     width: 2rem;
     height: 1.125rem;
 
@@ -15,6 +16,7 @@
   }
 
   &__bar {
+    display: inline-block;
     height: 0.125rem;
     background-color: $color-black;
 
