@@ -14,3 +14,9 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+@include media('>=xlarge') {
+  html {
+    font-size: clamp(1em, 1em + 1vw, 2em);
+  }
+}
