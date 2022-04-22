@@ -1,11 +1,12 @@
 .button-register {
-  padding-top: 0.8125rem;
-  padding-bottom: 0.8125rem;
-  padding-left: 1.4375rem;
-  padding-right: 1.375rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.875rem;
+  text-align: center;
 
-  border: 0.0938rem solid $color-medium-grey;
-  border-radius: 1rem;
+  border: 0.125rem solid $color-medium-grey;
+  border-radius: 0.875rem;
+  width: 6.5rem;
+  height: 2.625rem;
 }
 
 .button-learn-more {
@@ -13,13 +14,16 @@
 
   padding-left: 1.5rem;
   padding-right: 1.25rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.625rem;
+  padding-top: 0.8125rem;
+  padding-bottom: 0.75rem;
+
+  width: 10.1875rem;
+  height: 3.5rem;
 
   border-radius: 1rem;
-  border: 0.0625rem solid $color-black;
+  border: 0.0625rem solid $color-almost-black;
 
-  background-color: $color-black;
+  background-color: $color-almost-black;
   color: $color-white;
 
   &:hover {

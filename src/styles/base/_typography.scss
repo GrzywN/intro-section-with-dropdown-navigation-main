@@ -17,6 +17,8 @@
   font-size: 5rem;
   line-height: 5rem;
   letter-spacing: -1.11px;
+
+  color: $color-almost-black;
 }
 %heading-l {
   font-family: $font-sans-serif;
@@ -177,6 +179,9 @@
 
 .hero__paragraph {
   @extend %link;
+  @include media('>=medium') {
+    @include body-m;
+  }
 }
 
 .button-learn-more {
